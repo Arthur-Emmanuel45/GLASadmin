@@ -1,0 +1,158 @@
+.form_container {
+    background-image: url('https://images.pexels.com/photos/113338/pexels-photo-113338.jpeg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_inner_container {
+    display: flex;
+    width: 70%;
+    margin: auto;
+}
+
+.sidebar_form {
+    color: #fff;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 60%;
+}
+
+
+h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+h4 {
+    margin: 0;
+    font-size: 1.4em;
+}
+
+.login_signup_style {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    width: 40%;
+    padding: 10% 20px;
+}
+
+.login_form {
+    gap: 35px;
+}
+
+.signup_form {
+    gap: 13px;
+}
+
+.details_container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 80%;
+}
+.form_label {
+    text-align: left;
+}
+
+.form_input {
+    height: 35px;
+    background-color: #d8d8d8;
+    border: none;
+    border-radius: 5px;
+} 
+
+.admin_button {
+    font-size: 1.2em;
+    background: none;
+    cursor: pointer;
+}
+
+.login_button, .signup_button {
+    border: 1px solid #000;
+}
+.login_button {
+    padding: 5px 90px;
+}
+.signup_button {
+    padding: 5px 77px;
+}
+.login_signup_button {
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 5px 40px;
+}
+
+
+.inwith_button {
+    padding: 10px 25px;
+    background: none;
+    border: 1px solid #000;
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+    font-size: 1em;
+}
+
+.google_button {
+    color: #DB4437;
+}
+
+.login_button:hover, .signup_button:hover, .inwith_button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.login_signup_button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+@media (min-width: 767px) and (max-width: 1199px) {  
+    .form_inner_container {
+        width: 90%;
+    }
+    .details_container {
+        width: 100%; 
+    }
+}
+
+@media (max-width: 767px) {
+    .form_inner_container {
+        width: 100%;
+        display: block;
+    }
+    .sidebar_form {
+        width: 100%;
+        background: none;
+        color: #000;
+    }
+    h3 {
+        position: absolute;
+        top: 10%;
+        font-size: 1.6em;
+    }
+    .sidebar_form p {
+        position: absolute;
+        top: 84%;
+    }
+    .signup_button {
+        color: #000;
+        border-color: #000;
+    }
+    .login_signup_style {
+        width: 90%;
+        height: 100vh;
+        background: rgba(128, 128, 128, 0.5);
+    }
+}
