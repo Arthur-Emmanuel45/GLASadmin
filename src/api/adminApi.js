@@ -18,12 +18,16 @@ export const loginAdmin = async (formData) => {
 };
 
 // Get Analytics (Protected)
-export const getAnalytics = async () => {
+export const getAnalytics = async (startDate = "", endDate = "") => {
     const token = localStorage.getItem("adminToken");
     const { data } = await API.get("/stats", {
-    headers: {
-        Authorization: `Bearer ${token}`,
-    },
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+        params: {
+            startDate,
+            endDate
+        }
     });
     return data;
 };

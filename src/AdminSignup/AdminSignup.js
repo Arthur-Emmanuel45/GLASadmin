@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import '../AdminLogin/AdminLogin.css';
 import { Link } from 'react-router-dom';
 import { registerAdmin } from "../api/adminApi";
@@ -16,8 +15,8 @@ const AdminSignup = () => {
         e.preventDefault();
         try {
             const res = await registerAdmin(form);
-            alert("Admin registered successfully!");
-            console.log(res);
+            // alert("Admin registered successfully!");
+            // console.log(res);
             navigate('./dashboard')
         } catch (err) {
             alert(err.response?.data?.message || "Error signing up");
@@ -51,10 +50,9 @@ const AdminSignup = () => {
                         
                         <button type='submit' className='signup_button admin_button'>Sign Up</button>
 
-                        <button className='inwith_button'><FontAwesomeIcon icon={faGoogle} className='google_button'></FontAwesomeIcon>Sign Up with Google</button>
                     </form>
                     <div className='sidebar_form'>
-                        <h3>Customer Satisfaction Adminitration Portal</h3>
+                        <h3>Customer Satisfaction Administration Portal</h3>
                         <p>Already have an account? 
                             <Link to='/'>
                                 <button className='login_signup_button admin_button'>Login</button>

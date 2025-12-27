@@ -37,7 +37,7 @@ const DashBoard = () => {
     useEffect(() => {
         const loadData = async () => {
             try {
-                const data = await getAnalytics();
+                const data = await getAnalytics(startDate, endDate);
                 setStats(data);
             } catch {
                 alert("Failed to load analytics");
@@ -45,7 +45,7 @@ const DashBoard = () => {
             setLoading(false);
         };
         loadData();
-    }, []);
+    }, [startDate, endDate]);
 
     if (loading)
         return (
